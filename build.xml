@@ -3,7 +3,7 @@
 
     <target name="compile" description="Compile source">
         <mkdir dir="bin" />
-        <javac srcdir="src" includes="**" destdir="bin" (other compilation stuff here) />
+        <javac srcdir="src" includes="**" destdir="bin" />
         <copy todir="bin">
             <fileset dir="src" />
         </copy>
