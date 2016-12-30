@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="TicketManager" default="jar" basedir=".">  
+<project name="TicketManager" default="jar" basedir="."> 
+    <path id="maven-ant-tasks.classpath" path="lib/maven-ant-tasks-2.1.3.jar" />
+    <typedef resource="org/apache/maven/artifact/ant/antlib.xml" uri="antlib:org.apache.maven.artifact.ant" classpathref="maven-ant-tasks.classpath" />
     <target name="compile" description="Compile source">
         <mkdir dir="bin" />
         <javac srcdir="src" includes="**" destdir="bin" />
