@@ -3,13 +3,25 @@
     <path id="maven-ant-tasks.classpath" path="lib/maven-ant-tasks-2.1.3.jar" />
     <typedef resource="org/apache/maven/artifact/ant/antlib.xml" uri="antlib:org.apache.maven.artifact.ant" classpathref="maven-ant-tasks.classpath" />
     <target name="compile" description="Compile source">
+            <dependency>
+               <groupId>org.spigotmc</groupId>
+               <artifactId>spigot-api</artifactId>
+               <version>1.11-R0.1-SNAPSHOT</version>
+               <scope>provided</scope>
+            </dependency>
+            <!--Bukkit API-->
+            <dependency>
+                    <groupId>org.bukkit</groupId>
+                    <artifactId>bukkit</artifactId>
+                    <version>1.11-R0.1-SNAPSHOT</version>
+                    <scope>provided</scope>
+            </dependency>
         <mkdir dir="bin" />
         <javac srcdir="src" includes="**" destdir="bin" />
         <copy todir="bin">
             <fileset dir="src" />
         </copy>
     </target>
-
     <target name="jar" description="Package into JAR" depends="compile">
         <jar destfile="TicketManager.jar" basedir="./" compress="true" />
     </target>
