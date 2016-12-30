@@ -1,6 +1,6 @@
 <target name="jar">
     <mkdir dir="build/jar"/>
-    <jar destfile="build/jar/TicketManager.jar" basedir="build/classes">
+    <jar destfile="build/jar/TicketManager.jar">
         <manifest>
             <attribute name="Main-Class" value="net.dawn.mc.micheldewit.plugin.Modreq"/>
         </manifest>
