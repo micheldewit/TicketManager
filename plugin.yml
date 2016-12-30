@@ -1,14 +1,13 @@
 name: TicketManager
 main: net.dawn.mc.micheldewit.plugin.Modreq
-version: 1.3.1
+version: 1.3.2
 author: Micheldewit
 softdepends: []
 description: Serverside Ticketmanager, goes in coop with TicketMan-Web services.
 
 commands:
    ticket:
-     description: Token management command.
-     aliases: [tokens]
+     description: Ticket management command.
 
 permissions:
   TicketManager.Staff:
