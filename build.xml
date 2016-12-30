@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="TicketManager" default="jar" basedir=".">
-    
+<project name="TicketManager" default="jar" basedir=".">  
     <target name="compile" description="Compile source">
-        <dependency org="com.google.guava" name="guava" rev="11.0.2">
-            <artifact name="guava" type="jar" />
-        </dependency>
         <mkdir dir="bin" />
         <javac srcdir="src" includes="**" destdir="bin" />
         <copy todir="bin">
